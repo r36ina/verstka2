@@ -1,0 +1,38 @@
+/* idea style */ 
+
+.idea{
+    margin-bottom: 80px;
+    
+    .row{
+        row-gap: 24px;
+    }
+
+    h2{
+        font-weight: 700;
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 54px;
+    }
+
+    .idea__card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        gap: 24px;
+
+        .idea__card-name{
+            font-weight: 500;
+            font-size: 20px;
+            text-align: center;
+    
+        }
+
+        p{
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+}

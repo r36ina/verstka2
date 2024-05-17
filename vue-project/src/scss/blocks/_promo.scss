@@ -1,0 +1,107 @@
+/* promo style */
+
+.promo{
+    margin-bottom: 80px;
+
+    .promo__block{
+        display: flex;
+
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+        }
+
+        img{
+            padding-top: 78px;
+            border-radius: 10px;
+
+            @media screen and (max-width: 992px) {
+                padding-top: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    .promo__block-info{
+        padding-top: 134px;
+        margin-right: 40px;
+
+        @media screen and (max-width: 992px) {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+        @media screen and (max-width: 768px) {
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+        } 
+
+        h1{
+            font-weight: 700;
+            font-size: 42px;
+            margin-bottom: 16px;
+        }
+
+        p{
+            font-weight: 400;
+            font-size: 18px;
+            margin-bottom: 19px;
+            color: #8F99AC;
+        }
+
+        .button_primary{
+            padding: 17px 33px;
+            color: #F9F9F9;
+            background-color: #4047E2;
+            border-radius: 10px;
+            border: none;
+            transition: 0.3s;
+            margin-right: 20px;
+            cursor: pointer;
+
+            @media screen and (max-width: 1200px) {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+            @media screen and (max-width: 992px) {
+                margin-bottom: 0;
+                margin-right: 20px;
+            }
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+
+            &:focus{
+                transform: scale(0.95);
+            }
+        }
+
+        .button_primary-outline{
+            position: relative;
+            padding: 17px 30px 17px 60px;
+            background-color: #fff;
+            color: #4047E2;
+            border-radius: 10px;
+            border: solid 1px #4047E2;
+            transition: 0.3s;
+            cursor: pointer;
+
+            &:focus{
+                transform: scale(0.95);
+            }
+
+            &::before{
+                content: ''; 
+                left: 35px;
+                border-top: 8px solid transparent;
+                border-left: 15px solid #4047E2;
+                border-bottom: 8px solid transparent;
+                position: absolute; 
+                top: 50%;
+                transform: translateY(-50%);
+
+            }
+        }
+    }
+}

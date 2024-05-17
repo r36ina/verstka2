@@ -1,0 +1,122 @@
+/*nav style*/
+
+.navigation {
+    padding-top: 50px;
+    @media screen and (max-width: 768px) {
+        padding-top: 14px;
+    }
+
+    .navigation__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .burger{
+        display: none;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color: #FFFFFF;
+        z-index: 2;
+        cursor: pointer;
+
+        @media screen and (max-width: 576px) {
+            display: block;
+        }
+
+        span{
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            left: 5px;
+            background-color: #4047E2;
+            transition: background-color .3s, opacity .3s, transform .5s;
+            will-change: transform;
+
+            &:nth-child(1){
+                transform: translateY(-10px);
+            }
+
+            &:nth-child(3){
+                transform: translateY(10px);
+            }
+        }
+
+        &.open{      
+            span{
+                &:nth-child(1){
+                    transform: translateY(0) rotate(45deg);
+                }
+            
+                &:nth-child(2){
+                    opacity: 0;
+                }
+            
+                &:nth-child(3){
+                    transform: translateY(0) rotate(-45deg);
+                }
+            }
+
+            ~.navigation__list{
+                transform: translateX(-100%);
+                visibility: visible;
+                
+                .navigation__list-info{                 
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .navigation__list {
+        display: flex;
+        align-items: center;
+        grid-gap: 51px;
+
+        @media screen and (max-width: 576px) {
+            display: block;
+            position: fixed;
+            right: -285px;
+            top: 0;
+            width: 285px;
+            height: 100vh;
+            padding: 71px 12px 12px;
+            visibility: hidden;
+            background-color: #FFFFFF;
+            transition: transform .5s, visibility .5s;
+            will-change: transform;
+            z-index: 1;
+            box-shadow: 0 0 0 9999px rgba(0,0,0,0.2);
+
+        }
+
+        .navigation__list-info{
+            display: none;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 12px;
+            color: #8F99AC;
+            text-align: right;
+        }
+    }
+
+    .navigation__list-item-link {
+        color: #3F3A51;
+        font-weight: 400;
+        text-decoration: none;
+        font-size: 18px;
+
+        @media screen and (max-width: 576px) {
+            display: block;
+            margin-bottom: 22px;
+            text-align: right;
+        }
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

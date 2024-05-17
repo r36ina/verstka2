@@ -1,0 +1,67 @@
+/* possibilities style */
+
+.possibilities{
+    margin-bottom: 67px;
+
+    h2{
+        font-weight: 700;
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    .possibilities__card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 320px;
+        max-width: 285px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        border-radius: 20px;
+
+        .possibilities__card-name{
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+
+        p{
+            font-size: 18px;
+        }
+    }
+
+    .possibilities__card1{
+        background: #DFE1FF;
+        box-shadow: var(--box-shadow);
+
+        .possibilities__card-icon{
+            background: #4047E2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 89px;
+            width: 89px;
+            margin-bottom: 26px;
+        }
+    }
+
+    .possibilities__card2{
+        background: #FFE1AD;
+        box-shadow: 0px 0px 35px rgba(252, 162, 6, 0.2);
+
+        .possibilities__card-icon{
+            background: #FCA206;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 89px;
+            width: 89px;
+            margin-bottom: 26px;
+        }
+    }
+}
